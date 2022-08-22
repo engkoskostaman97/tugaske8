@@ -53,7 +53,7 @@ nav {
 
 body {
     margin: 0;
-    background-color: grey;
+
 }
 
 .headContent {
@@ -84,7 +84,7 @@ body {
     font-size: 18px;
     border-radius: 15px;
     padding: 3px 20px;
-    background-color: blueviolet;
+    background-color: black;
     color: white;
     border: black;
 }
@@ -99,4 +99,117 @@ body {
 
 .btn {
     display: flex;
+}
+
+body {
+    background-color: rgb(212, 212, 212);
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: space-evenly;
+
+
+}
+
+.blog-list-item {
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 10px;
+    width: 800px;
+    height: 30%;
+    background-color: whitesmoke;
+    box-shadow: 0px 9px 20px grey;
+    margin: 25px;
+    padding: 20px;
+
+
+}
+
+.blog-image {
+    width: 100%;
+    border: 1px whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.judul-blog {
+    margin-top: 10px;
+}
+
+.detail-blog-content {
+    color: grey;
+}
+
+.logo-blog i {
+    padding-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.logo-kecil {
+    width: 25px;
+    margin: 5px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.btn-edit {
+    color: white;
+    background-color: rgb(39, 39, 77);
+    padding: 5px;
+    margin-right: 5px;
+    border: black;
+    border-radius: 5px;
+    width: 165px;
+    font-family: sans-serif;
+}
+
+.btn-post {
+    color: white;
+    background-color: rgb(39, 39, 77);
+    padding: 5px;
+    margin-right: 5px;
+    border: black;
+    border-radius: 5px;
+    width: 165px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.judul-project {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.konten {
+    background-color: whitesmoke;
+}
+
+.judul-content {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fa-brands {
+    padding: 7px;
+    font-size: 25px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
 }

@@ -12,14 +12,6 @@ let isLogin = true
 let dataBlog = []
 
 app.get('/', function (request, response) {
-    response.render('index')
-})
-
-app.get('/contact', function (request, response) {
-    response.render('contact')
-})
-
-app.get('/blog', function (request, response) {
     // console.log(dataBlog);
 
     let data = dataBlog.map(function (item) {
@@ -31,8 +23,14 @@ app.get('/blog', function (request, response) {
         }
     })
 
-    response.render('blog', { isLogin, blog: data })
+    response.render('index', { isLogin, blog: data })
 })
+
+app.get('/contact', function (request, response) {
+    response.render('contact')
+})
+
+
 
 app.get('/blog-detail/:index', function (request, response) {
     let index = request.params.index
@@ -50,12 +48,12 @@ app.get('/blog-detail/:index', function (request, response) {
     response.render('blog-detail', { data })
 })
 
-app.get('/add-blog', function (request, response) {
-    response.render('add-blog')
-})
+app.get("/myproject", function (request, response) {
+    response.render("myproject");
+});
 
 
-app.post('/add-blog', function (request, response) {
+app.post('/myproject', function (request, response) {
     // console.log(request.body);
 
     let title = request.body.inputTitle
@@ -76,7 +74,7 @@ app.post('/add-blog', function (request, response) {
 
     dataBlog.push(blog)
 
-    response.redirect('/blog')
+    response.redirect('/')
 })
 
 app.get('/update-blog/:index', function (request, response) {
@@ -101,7 +99,7 @@ app.post('/update-blog/:index', function (request, response) {
     dataBlog[index].stardate = request.body.inputStardate
     dataBlog[index].enddate = request.body.inputEnddate
 
-    response.redirect('/blog')
+    response.redirect('/')
 })
 
 app.get('/delete-blog/:index', function (request, response) {
@@ -110,7 +108,7 @@ app.get('/delete-blog/:index', function (request, response) {
     // console.log(index);
     dataBlog.splice(index, 1)
 
-    response.redirect('/blog')
+    response.redirect('/')
 })
 
 
