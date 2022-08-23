@@ -47,25 +47,22 @@
                     <form action="/update-blog/{{index}}" method="post">
                         <div class="mb-3">
                             <label for="inputTitle" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="inputTitle" name="inputTitle"
-                                value="{{data.title}}">
+                            <input type="text" class="form-control" id="inputTitle" name="inputTitle">
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label for="input-stardate">star-date</label>
-                                <input id="input-stardate" type="date" class="form-control" name="inputStardate"
-                                    value="{{data.stardate}}">
+                                <input id="input-stardate" type="date" class="form-control" name="inputStartDate">
                             </div>
                             <div class="col">
                                 <label for="input-enddate">end-date</label>
-                                <input id="input-enddate" type="date" class="form-control" name="inputEnddate"
-                                    value="{{data.enddate}}">
+                                <input id="input-enddate" type="date" class="form-control" name="inputEndDate">
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="inputContent" class="form-label">Content</label>
                             <textarea class="form-control" id="inputContent" name="inputContent" cols="30"
-                                rows="3">{{data.content}}</textarea>
+                                rows="3"></textarea>
                         </div>
                         <div>
                             <div class="form-check form-check-inline">

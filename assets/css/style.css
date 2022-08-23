@@ -58,9 +58,11 @@ body {
 
 .headContent {
     display: flex;
-    margin: 100px;
+    margin: 170px;
     border-radius: 10px;
     background-color: white;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .content {
@@ -118,7 +120,7 @@ body {
 .blog-list-item {
     border: 1px solid rgb(189, 189, 189);
     border-radius: 10px;
-    width: 800px;
+    width: 400px;
     height: 30%;
     background-color: whitesmoke;
     box-shadow: 0px 9px 20px grey;
@@ -142,7 +144,7 @@ a {
 }
 
 .judul-blog {
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .detail-blog-content {
