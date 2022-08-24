@@ -1,3 +1,4 @@
+const { json } = require('express')
 const express = require('express')
 
 const app = express()
@@ -19,6 +20,7 @@ app.get('/', function (request, response) {
             ...item,
             // date: getFullTime(item.duration),
             duration: getDistanceTime(new Date(item.startDate), new Date(item.endDate)),
+            postAt: getFullTime(new Date())
 
         }
     })
@@ -58,17 +60,25 @@ app.get("/myproject", function (request, response) {
 
 app.post('/myproject', function (request, response) {
 
-    // console.log(request.body);
+    console.log(request.body);
     let title = request.body.inputTitle;
     let startDate = request.body.inputStartDate;
     let endDate = request.body.inputEndDate;
     let content = request.body.inputContent;
+    let android = request.body.android;
+    let react = request.body.react;
+    let nodejs = request.body.nodejs;
+    let squarejs = request.body.squarejs;
 
 
     console.log(title);
     console.log(startDate);
     console.log(endDate);
     console.log(content);
+    console.log(android);
+    console.log(react);
+    console.log(nodejs);
+    console.log(squarejs);
 
     let blog = {
         title,
@@ -76,6 +86,10 @@ app.post('/myproject', function (request, response) {
         startDate,
         endDate,
         content,
+        android,
+        react,
+        nodejs,
+        squarejs,
         author: "Engkos Kostaman",
     }
 
@@ -100,6 +114,10 @@ app.post('/update-blog/:index', function (request, response) {
     dataBlog[index].content = request.body.inputContent
     dataBlog[index].startDate = request.body.inputStartDate
     dataBlog[index].endDate = request.body.inputEndDate
+    dataBlog[index].android = request.body.android
+    dataBlog[index].react = request.body.react
+    dataBlog[index].nodejs = request.body.nodejs
+    dataBlog[index].squarejs = request.body.squarejs
 
     response.redirect('/')
 })
